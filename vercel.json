@@ -1,5 +1,19 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "app.js"
+      }
+    ],
+    "env": {
+      "DATABASE":"mongodb+srv://prince123:Prince123p@cluster0.maorokm.mongodb.net/PrinceUsers?retryWrites=true&w=majority&appName=Cluster0"
+    }
   }
+  
